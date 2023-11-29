@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+#include "Fonctions.h"
 
-#define WELCOME_MSG "Bienvenue dans le Shell ENSEA\nPour quitter tapez 'exit'\nenseash % "
+
 int main() {
-    write(STDOUT_FILENO,WELCOME_MSG,strlen(WELCOME_MSG));
+        Question1_Acceuil();
+    while(1){
+        Question2_Cmd();
+    }
     return 0;
 }
