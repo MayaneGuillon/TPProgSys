@@ -8,7 +8,8 @@ int main() {
         //Question3_exit();
         //Question4_return();
         //Question5_temps();
-        Question6_complexe();
+        //Question6_complexe();
+        Question7_redirection();
     }
     return 0;
 }
