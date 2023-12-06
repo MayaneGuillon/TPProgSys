@@ -12,3 +12,4 @@ Nous venons de créer un échange entre l'utilisateur (depuis le clavier) et not
 ![Q2](img/q2 shell.png) 
 
 compte rendu sera fini en fin de tp
+reflexions personnelles ce qu'on a appris
