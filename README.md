@@ -80,6 +80,7 @@ Pour améliorer le code précédent, on a conservé le code précédent. On a ap
 * **Amélioration de la lisibilité :** En utilisant un tableau elements pour stocker les éléments de la commande, le code devient potentiellement plus lisible et modulaire, facilitant l'ajout ou la modification d'éléments de la commande. Cela nous permettra de relever les symboles ">" et "<".
 
 Ainsi, ces améliorations visent à rendre la fonction plus polyvalente et à prendre en charge une variété de commandes avec des arguments distincts.
+
 ![Q6a](img/q6shell.png)
 ![Q6b](img/q6debugger.png)
 
