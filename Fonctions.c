@@ -56,3 +56,40 @@ void Question3_exit(){
             write(STDOUT_FILENO,ENSEA, strlen(ENSEA));
         }
 }
+void Question4_return(){
+    char cmd[MAXSIZE]={0};
+    ssize_t nbChar;
+    nbChar=read(STDIN_FILENO, cmd, MAXSIZE);
+    cmd[nbChar-1]='\0';
+    // /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // program stop it if the message sent is "exit" or ""
+    // strcmp compare two string element: if they are different the result is 1 AND if they are same the result is 0
+    if(strcmp(cmd, "exit")==0||strcmp(cmd, "")==0){
+        write(STDOUT_FILENO,EXIT_MSG, strlen(EXIT_MSG));
+        exit(EXIT_SUCCESS);
+    }
+    // /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    pid_t pid;
+    int status;
+    pid=fork();
+
+    if(pid==0){
+        execlp(cmd,cmd,NULL);
+        exit(EXIT_FAILURE);
+    }
+    else{
+        wait(&status);
+        //write(STDOUT_FILENO,ENSEA, strlen(ENSEA));
+        if(WIFEXITED(status)){
+            sprintf(cmd,"%s[code exit : %d]\t" ,ENSEA, WEXITSTATUS(status));
+            write(STDOUT_FILENO,cmd, strlen(cmd));
+        }
+        else if(WIFSIGNALED(status)){
+            sprintf(cmd, "%s[signal exit : %d]\t",ENSEA, WTERMSIG(status));
+            write(STDOUT_FILENO,cmd, strlen(cmd));
+        }
+    }
+}
+void Question5_temps(){
+
+}
