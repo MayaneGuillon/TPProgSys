@@ -67,8 +67,20 @@ Puis, on a calculé et renvoyé dans la console le temps écoulé entre le débu
 On remarque que la commande *wc* a été interrompu comme précedemment et que le temps que l'on a mis a interrompre la commande est de l'ordre de 10s, soit bien plus longue qu'une execution classique réussite.
 
 ## Question 6 : Exécution d’une commande complexe (avec arguments) 
-*Objectif:*
+*Objectif: Améliorer le code précédent pour executé une commande avec plusieurs arguments*
 
+Pour améliorer le code précédent, on a conservé le code précédent en apportant les améliorations suivantes :
+
+* **Gestion des arguments de la commande :** la commande est divisée en éléments (arguments) à l'aide de strtok(). Cela permet de spécifier des arguments distincts lors de l'exécution de la commande. *EX:* si la commande est "ls -l", elle sera divisée en deux éléments : "ls" et "-l". Cela offre une flexibilité accrue dans la spécification des commandes.
+
+
+* **Exécution de la commande avec execvp() :** La fonction execvp() prend en charge un tableau d'éléments, permettant ainsi de spécifier des commandes avec des arguments. Cela élimine la nécessité d'utiliser execlp() qui nécessite une liste d'arguments prédéfinie.
+
+* **Possibilité d'ajouter davantage d'éléments :** La boucle for permet de stocker jusqu'à 10 éléments de la commande. Cela offre une flexibilité pour prendre en charge des commandes avec un nombre variable d'arguments.
+
+* **Amélioration de la lisibilité :** En utilisant un tableau elements pour stocker les éléments de la commande, le code devient potentiellement plus lisible et modulaire, facilitant l'ajout ou la modification d'éléments de la commande. Cela nous permettra de relever les symboles ">" et "<".
+
+Ainsi, ces améliorations visent à rendre la fonction plus polyvalente et à prendre en charge une variété de commandes avec des arguments distincts.
 ![Q6a](img/q6shell.png)
 ![Q6b](img/q6debugger.png)
 ## Question 7 : Gestion des redirections vers stdin et stdout avec ‘<’ et ‘>’ 
