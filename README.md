@@ -57,9 +57,15 @@ En résumé, cette partie du code fournit des informations détaillées sur la m
 Pour voir apparaître un retour de commande interrompu, lance une commande que l'on coupe dans le terminale.
 
 ## Question 5 : Mesure du temps d’exécution de la commande en utilisant l’appel clock_gettime 
-*Objectif:*
+*Objectif: Afficher le temps d'execution de la commande envoyée*
+
+Pour créer cette fonction, on a conservé le code précédent. On a utilisé la fonction clock_gettime() pour enregistrer le temps de début et de fin dans des structures de type timespec nomées TimeStart et TimeStop.
+Puis, on a calculé et renvoyé dans la console le temps écoulé entre le début (TimeStart) et la fin (TimeStop) en millisecondes.
 
 ![Q5](img/q5shell.png)
+
+On remarque que la commande *wc* a été interrompu comme précedemment et que le temps que l'on a mis a interrompre la commande est de l'ordre de 10s, soit bien plus longue qu'une execution classique réussite.
+
 ## Question 6 : Exécution d’une commande complexe (avec arguments) 
 *Objectif:*
 
