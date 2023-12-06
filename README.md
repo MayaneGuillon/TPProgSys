@@ -69,10 +69,9 @@ On remarque que la commande *wc* a été interrompu comme précedemment et que l
 ## Question 6 : Exécution d’une commande complexe (avec arguments) 
 *Objectif: Améliorer le code précédent pour executé une commande avec plusieurs arguments*
 
-Pour améliorer le code précédent, on a conservé le code précédent en apportant les améliorations suivantes :
+Pour améliorer le code précédent, on a conservé le code précédent. On a apporté les améliorations suivantes :
 
 * **Gestion des arguments de la commande :** la commande est divisée en éléments (arguments) à l'aide de strtok(). Cela permet de spécifier des arguments distincts lors de l'exécution de la commande. *EX:* si la commande est "ls -l", elle sera divisée en deux éléments : "ls" et "-l". Cela offre une flexibilité accrue dans la spécification des commandes.
-
 
 * **Exécution de la commande avec execvp() :** La fonction execvp() prend en charge un tableau d'éléments, permettant ainsi de spécifier des commandes avec des arguments. Cela élimine la nécessité d'utiliser execlp() qui nécessite une liste d'arguments prédéfinie.
 
@@ -83,9 +82,14 @@ Pour améliorer le code précédent, on a conservé le code précédent en appor
 Ainsi, ces améliorations visent à rendre la fonction plus polyvalente et à prendre en charge une variété de commandes avec des arguments distincts.
 ![Q6a](img/q6shell.png)
 ![Q6b](img/q6debugger.png)
+
+On voit qu'une commande simple avec plusieurs arguments comme *"ls -l"* est bien executé.
+On peut voir à l'aide du debugger, les valeurs enregistrer dans notre tableau *elements* correspondant à chaque commande.
+
 ## Question 7 : Gestion des redirections vers stdin et stdout avec ‘<’ et ‘>’ 
 *Objectif:*
 
 ## Réflexions personnelles
 ### Mayane GUILLON
+
 ### Rania DAOUIA 
