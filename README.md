@@ -92,4 +92,11 @@ On peut voir à l'aide du debugger, les valeurs enregistrer dans notre tableau *
 ## Réflexions personnelles
 ### Mayane GUILLON
 
+En travaillant sur ces fonctions, j'ai vraiment approfondi mes connaissances en programmation système. 
+Les améliorations progressives les questions, m'ont permis de mieux appréhender la gestion des processus, des commandes, et la mesure du temps d'exécution dans un environnement Linux.
+
+Cette expérience m'a doté de compétences pratiques, comme la manipulation des arguments de commande, l'utilisation judicieuse de fork() pour créer des processus (différence père/fils), et la gestion des terminaisons de ces processus avec wait(). En travaillant sur ces aspects, j'ai également perfectionné ma manière de manipuler les fichiers et d'utiliser des fonctions système essentielles telles que execlp() et execvp().
+
+Dans l'ensemble, ce travail a renforcé ma logique de programmation, ma capacité à résoudre des problèmes, et ma compréhension des bonnes pratiques en programmation systèmes.
+
 ### Rania DAOUIA 
