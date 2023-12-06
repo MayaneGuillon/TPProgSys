@@ -26,6 +26,8 @@ Cette question repose sur la création d'un processus fils pour exécuter une co
 
 ![Q2](img/q2shell.png) 
 
+On voit que la commande "ls" est bien executé.
+
 ## Question 3 : Gestion de la sortie du shell avec la commande “exit” ou un <ctrl>+d
 *Objectif: Créer une condition d'arrêt des commandes écritent dans la console*
 
@@ -35,12 +37,25 @@ Si ces deux chaînes de caractère sont identiques, alors on écrit un message d
 
 ![Q3](img/q3shell.png)
 
+On voit bien que lorsque l'on écrit la commande 'exit' le programme s'arrête et renvoie un message d'au revoir. 
+
 ## Question 4 : Affichage du code de retour (ou du signal) de la commande précédente dans le prompt 
-*Objectif:*
+*Objectif: Créer une fonction qui renverra à l'utilisateur un message en indiquant si la commande est executée (code) ou interrompue (signal)*
+
+Pour créer cette fonction, on a conservé le code précédent en ajoutant un test avec : 
+
+* **WIFEXITED(status)** qui vérifie si le processus fils s'est terminé normalement, c'est-à-dire par un appel à exit() ou à la fonction return. Si cette condition est vraie, on renvoie un message écrit "code" avec l'utilisation de WEXITSTATUS(status). Celui-ci récupère le code de sortie du processus fils. *Dans notre cas:* 0 si il est executé sans erreur, 1 si la commande n'existe pas, ...
+
+* **WIFSIGNALED(status)** qui vérifie si la terminaison (destruction) du processus fils est due à un signal. Ensuite, on renvoie un message écrit "code" avec l'utilisation de WTERMSIG(status). Celui-ci récupère le numéro du signal qui a provoqué la terminaison du processus. 
+
+En résumé, cette partie du code fournit des informations détaillées sur la manière dont le processus fils s'est terminé, que ce soit par un code de sortie normal ou en réaction à un signal. Ces informations sont formatées et affichées dans la sortie standard pour informer l'utilisateur du résultat de l'exécution du processus fils.
 
 ![Q4a](img/q4shell.png)
 ![Q4b](img/q4terminal1.png)
 ![Q4c](img/q4Terminal2.png)
+
+Pour voir apparaître un retour de commande interrompu, lance une commande que l'on coupe dans le terminale.
+
 ## Question 5 : Mesure du temps d’exécution de la commande en utilisant l’appel clock_gettime 
 *Objectif:*
 
