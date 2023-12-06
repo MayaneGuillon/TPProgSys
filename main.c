@@ -6,7 +6,8 @@ int main() {
     while(1){
         //Question2_Cmd();
         //Question3_exit();
-        Question4_return();
+        //Question4_return();
+        Question5_temps();
     }
     return 0;
 }
