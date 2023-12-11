@@ -101,3 +101,11 @@ Cette expérience m'a doté de compétences pratiques, comme la manipulation des
 Dans l'ensemble, ce travail a renforcé ma logique de programmation, ma capacité à résoudre des problèmes, et ma compréhension des bonnes pratiques en programmation systèmes.
 
 ### Rania DAOUIA 
+
+Ce TP sur la création d'un micro shell a considérablement enrichi ma compréhension de la programmation système. 
+
+L'exploration du concept fondamental du "fork", qui permet la création de processus distincts, a été une révélation. Grâce à cette technique, j'ai appris à gérer efficacement l'exécution simultanée de différentes tâches, améliorant ainsi l'efficacité des programmes. 
+
+En mettant en pratique des fonctions système telles que write, read, et execlp, j'ai consolidé mes connaissance sur la manipulation des processus et des flux de données. 
+
+Ce TP a également été un défi stimulant, notamment dans la gestion des commandes et la prise en charge des arguments. C'est avec satisfaction que j'ai vu le shell fonctionner, exécutant des commandes avec succès et affichant les informations du processus.
